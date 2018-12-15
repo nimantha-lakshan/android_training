@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Alerts &amp; Popups</string>
+    <string name="profile_name">Nimantha Lakshan</string>
+    <string name="profile_detail">txtxtxttxtxttxtxttxttxttxtx</string>
+    <string name="btn_close">Close</string>
+    <string name="btn_back">Back</string>
+    <string name="btn_fromTop">Top</string>
+    <string name="btn_fromBottom">Bottom</string>
+    <string name="btn_fromRight">Right</string>
+    <string name="btn_fromLeft">Left</string>
+</resources>

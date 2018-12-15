@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="login">Log in</string>
+    <string name="btn_fb">Login with Facebook</string>
+    <string name="btn_twitter">Login with Twitter</string>
+    <string name="or">OR</string>
+    <string name="signup">Sign Up Now</string>
+    <string name="need">NEED AN ACCOUNT?</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="todo">TODO</string>
+    <string name="cam">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="email">E-mail</string>
+    <string name="slide">Slide Show</string>
+    <string name="nav_header">Nav Bar header</string>
+</resources>
