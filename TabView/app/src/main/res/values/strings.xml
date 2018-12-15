@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TabView</string>
+    <string name="tab1">One</string>
+    <string name="tab2">Two</string>
+    <string name="tab3">Three</string>
+    <string name="btn">Send Data</string>
+    <string name="name">name</string>
+    <string name="description">des</string>
+    <string name="tab4">Gallery</string>
+    <string name="send_data">Send Data</string>
+    <string name="open_the_camera">Open the Camera</string>
+</resources>
