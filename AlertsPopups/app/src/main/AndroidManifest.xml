@@ -20,7 +20,9 @@
         </activity>
         <activity android:name=".activities.AnimateActivity" />
         <activity android:name=".activities.TestOneActivity" />
-        <activity android:name=".activities.TestTwoActivity"></activity>
+        <activity android:name=".activities.TestTwoActivity" />
+        <activity android:name=".activities.TestThreeActivity" />
+        <activity android:name=".activities.TestFourActivity"></activity>
     </application>
 
 </manifest>

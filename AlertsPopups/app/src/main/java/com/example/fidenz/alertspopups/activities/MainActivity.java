@@ -1,15 +1,14 @@
 package com.example.fidenz.alertspopups.activities;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+
+
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
 import android.widget.Toast;
 
 import com.example.fidenz.alertspopups.R;
@@ -28,6 +27,13 @@ public class MainActivity extends AppCompatActivity implements Dialog.DialogActi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        Animation anim = android.view.animation.AnimationUtils.loadAnimation(this, R.anim.splash);
+//        anim.setInterpolator(new LinearInterpolator());
+//        anim.setRepeatCount(Animation.INFINITE);
+//        anim.setDuration(700);
+
+
 
         profile = new ArrayList();
         loadData();

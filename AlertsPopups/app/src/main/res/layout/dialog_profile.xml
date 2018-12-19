@@ -1,13 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content">-->
+
+<com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/shape_rounded_corners">
+    android:background="@color/layout"
+    app:corner_radius="40dp">
 
     <ImageView
         android:id="@+id/dialog_img_profile"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="180dp"
+        android:contentDescription="@string/app_name"
         android:src="@drawable/ic_profile_img_placeholder" />
 
     <ImageButton
@@ -15,7 +19,10 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/ic_close" />
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_close"
+        android:contentDescription="@string/app_name" />
 
     <TextView
         android:id="@+id/dialog_txt_profile_name"
@@ -24,6 +31,8 @@
         android:layout_below="@id/dialog_img_profile"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:textAlignment="center"
         android:textSize="30sp" />
 
@@ -40,9 +49,13 @@
     <Button
         android:id="@+id/_dialog_btn_close"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@+id/dialog_txt_profile_detail"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:background="@color/btncolor"
         android:text="@string/btn_close"
         android:textSize="18sp" />
+</com.jcminarro.roundkornerlayout.RoundKornerRelativeLayout>
 
-</RelativeLayout>
+    <!--</RelativeLayout>-->

@@ -1,6 +1,6 @@
 package com.example.fidenz.alertspopups.alerts;
 
-import android.annotation.SuppressLint;
+
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -52,7 +52,8 @@ public class Dialog extends DialogFragment {
         txt_details = view.findViewById(R.id.dialog_txt_profile_detail);
         btn_close = view.findViewById(R.id._dialog_btn_close);
 
-      /* create bundle and get data from main activity */
+        getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        /* create bundle and get data from main activity */
         Bundle bundle = getArguments();
 
         Glide.with(getContext())
