@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".acivities.CreateUser">
+
+    <TextView
+        android:id="@+id/txt_cr_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/new_user"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_uname_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_cr_head"
+        android:labelFor="@+id/edt_user_name"
+        android:text="@string/txt_username"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edt_user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_uname_label"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/txt_mobile_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_user_name"
+        android:labelFor="@+id/edt_mobile"
+        android:text="@string/txt_mobile"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edt_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_mobile_label"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/txt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_mobile"
+        android:labelFor="@+id/edt_password"
+        android:text="@string/hint_password"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_password"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:importantForAutofill="no"
+        android:inputType="textPassword"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/btn_save_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_password"
+        android:background="@color/colorPrimary"
+        android:text="@string/btn_save"
+        android:textAllCaps="false"
+        android:textSize="20sp" />
+
+</RelativeLayout>

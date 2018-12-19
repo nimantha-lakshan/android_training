@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/txt_dialog_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="@string/update"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txt_label_for_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_dialog_head"
+        android:text="@string/hint_username" />
+
+    <EditText
+        android:id="@+id/edt_update_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_label_for_username"
+        android:inputType="text"
+        android:labelFor="@+id/txt_label_for_username" />
+
+    <TextView
+        android:id="@+id/txt_label_for_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_update_username"
+        android:text="@string/txt_mobile" />
+
+    <EditText
+        android:id="@+id/edt_update_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_label_for_mobile"
+        android:inputType="number"
+        android:labelFor="@+id/txt_label_for_mobile" />
+
+    <TextView
+        android:id="@+id/txt_label_for_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_update_mobile"
+        android:text="@string/hint_password" />
+
+    <EditText
+        android:id="@+id/edt_update_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_label_for_password"
+        android:inputType="textPassword"
+        android:labelFor="@+id/txt_label_for_password" />
+
+    <Button
+        android:id="@+id/btn_update_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_update_password"
+        android:layout_centerHorizontal="true"
+        android:text="@string/btn_save" />
+
+</RelativeLayout>

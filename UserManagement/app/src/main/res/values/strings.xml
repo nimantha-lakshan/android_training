@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">User Management</string>
+    <string name="txt_login">Log In</string>
+    <string name="btn_login">Log In</string>
+    <string name="hint_username">User name</string>
+    <string name="hint_password">Password</string>
+    <string name="txt_username">User Name</string>
+    <string name="txt_mobile">Mobile</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_create_user">New User</string>
+    <string name="todo">TODO</string>
+    <string name="users_list">Users</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="new_user">New User</string>
+    <string name="update">Update user details</string>
+</resources>
