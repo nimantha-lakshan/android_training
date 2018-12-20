@@ -29,6 +29,6 @@ compileOptions {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 	
-#build.gradle(Project: xxxx)
+# build.gradle(Project: xxxx)
 classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
         classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-r
