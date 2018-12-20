@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">API</string>
+    <string name="choose">Choose the City</string>
+    <string name="choose_the_city">Choose the city</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="clouds_status">Clouds Status</string>
+    <string name="longitudes">Longitude</string>
+    <string name="latitude">Latitude</string>
+
+    <string-array name="cities">
+        <item>Colombo</item>
+        <item>Kandy</item>
+        <item>London</item>
+        <item>New York</item>
+        <item>Mumbai</item>
+        <item>Tokyo</item>
+        <item>Melbourne</item>
+    </string-array>
+</resources>
