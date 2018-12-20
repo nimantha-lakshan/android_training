@@ -6,7 +6,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/ic_add_36dp"
-            android:tileMode="disabled" />
+            android:src="@drawable/ic_edit_36dp"
+            android:tileMode="mirror" />
     </item>
 </layer-list>
