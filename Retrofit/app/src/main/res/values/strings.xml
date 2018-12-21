@@ -3,4 +3,6 @@
     <string name="todo">TODO</string>
     <string name="username">User Name</string>
     <string name="save">Save</string>
+    <string name="enter_a_name">Enter a name</string>
+    <string name="delete_all">Delete All</string>
 </resources>

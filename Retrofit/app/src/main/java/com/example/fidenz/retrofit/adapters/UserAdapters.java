@@ -1,19 +1,17 @@
 package com.example.fidenz.retrofit.adapters;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.fidenz.retrofit.R;
+import com.example.fidenz.retrofit.alerts.UpdateUserDialog;
 import com.example.fidenz.retrofit.database.User;
 import com.example.fidenz.retrofit.model.UserViewModel;
 
@@ -25,14 +23,20 @@ public class UserAdapters extends RecyclerView.Adapter<UserAdapters.UserViewHold
     private List<User> usersData = new ArrayList<>();
     private UserViewModel userViewModel;
     private Context context;
+    private FragmentManager fragmentManager;
 
-    public UserAdapters(Context context, UserViewModel userViewModel) {
+    public UserAdapters(Context context, UserViewModel userViewModel, FragmentManager supportFragmentManager) {
         this.userViewModel = userViewModel;
         this.context = context;
+        this.fragmentManager = supportFragmentManager;
     }
 
     public void setUserData(List<User> usersData) {
         this.usersData = usersData;
+    }
+
+    public User getUserAt(int position) {
+        return usersData.get(position);
     }
 
     @NonNull
@@ -49,37 +53,19 @@ public class UserAdapters extends RecyclerView.Adapter<UserAdapters.UserViewHold
         myViewHolder.txt_id.setText(String.valueOf(user.getUser_id()));
         myViewHolder.txt_username.setText(user.getUser_name());
 
-        myViewHolder.btn_delete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        myViewHolder.itemView.setOnLongClickListener(v -> {
 
-                new AlertDialog.Builder(context)
-                        .setTitle("Delete")
-                        .setMessage("Are you sure?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                userViewModel.delete(user);
-                                dialog.dismiss();
-                            }
-                        })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        }).create().show();
-            }
+            Bundle data = new Bundle();
+            data.putInt("id", user.getUser_id());
+            data.putString("name", user.getUser_name());
+
+            UpdateUserDialog updateUserDialog = new UpdateUserDialog();
+            updateUserDialog.setArguments(data);
+            updateUserDialog.show(fragmentManager, "");
+
+            return false;
         });
 
-        myViewHolder.btn_edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                userViewModel.deleteAll();
-                Log.i("mylogs", "on edit");
-            }
-        });
     }
 
     @Override
@@ -91,15 +77,11 @@ public class UserAdapters extends RecyclerView.Adapter<UserAdapters.UserViewHold
 
         TextView txt_id;
         TextView txt_username;
-        ImageButton btn_edit;
-        ImageButton btn_delete;
 
         public UserViewHolder(@NonNull View itemView) {
             super(itemView);
             txt_id = itemView.findViewById(R.id.txt_userId);
             txt_username = itemView.findViewById(R.id.txt_username);
-            btn_edit = itemView.findViewById(R.id.btn_edit);
-            btn_delete = itemView.findViewById(R.id.btn_delete);
         }
     }
 }

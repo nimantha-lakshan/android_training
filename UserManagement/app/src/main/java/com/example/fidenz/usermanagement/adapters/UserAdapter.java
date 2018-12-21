@@ -73,6 +73,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
                 UpdateUser dialog = new UpdateUser();
                 dialog.setArguments(bundle);
                 dialog.show(supportFragmentManager, "show");
+                notifyDataSetChanged();
             }
         });
 
@@ -88,8 +89,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserHolder> {
                             public void onClick(DialogInterface dialog, int which) {
                                 userDao.deleteByKey(user_data.getUser_id());
                                 Toast.makeText(context, "user delete", Toast.LENGTH_SHORT).show();
+                                notifyDataSetChanged();
                                 dialog.dismiss();
-                                context.startActivity(new Intent(context, UserList.class));
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {

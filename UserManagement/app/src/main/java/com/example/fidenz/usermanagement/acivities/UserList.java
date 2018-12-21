@@ -40,6 +40,7 @@ public class UserList extends AppCompatActivity {
         RecyclerView review = findViewById(R.id.recycler_userlist);
         review.setLayoutManager(layoutManager);
         UserAdapter userAdapter = new UserAdapter(this, userDao.loadAll(), getSupportFragmentManager());
+        userAdapter.notifyDataSetChanged();
         review.setAdapter(userAdapter);
         userAdapter.notifyDataSetChanged();
 

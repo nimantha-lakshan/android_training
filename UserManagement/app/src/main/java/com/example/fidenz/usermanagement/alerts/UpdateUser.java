@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.example.fidenz.usermanagement.R;
 import com.example.fidenz.usermanagement.acivities.UserList;
+import com.example.fidenz.usermanagement.adapters.UserAdapter;
 import com.example.fidenz.usermanagement.database.DaoMaster;
 import com.example.fidenz.usermanagement.database.DaoSession;
 import com.example.fidenz.usermanagement.database.User;
@@ -28,6 +29,7 @@ public class UpdateUser extends DialogFragment {
     private EditText update_mobile;
     private EditText update_password;
     private Button btn_update;
+
 
     @Nullable
     @Override
@@ -65,7 +67,6 @@ public class UpdateUser extends DialogFragment {
                     userDao.update(us);
                     Toast.makeText(getContext(), "Updated", Toast.LENGTH_SHORT).show();
                     getDialog().dismiss();
-                    startActivity(new Intent(getActivity(), UserList.class));
                 }
             }
         });
