@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Object Box</string>
+    <string name="uid">001</string>
+    <string name="uname">John Snow</string>
+    <string name="umobile">0767664563</string>
+    <string name="uemail">john@gmail.com</string>
+    <string name="menu_item_popular">Popular</string>
+    <string name="menu_item_search">Search</string>
+    <string name="menu_item_favourite">Favourite</string>
+    <string name="menu_item_upcoming">Upcoming</string>
+</resources>
