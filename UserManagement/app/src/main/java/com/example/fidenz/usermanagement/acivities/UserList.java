@@ -17,6 +17,7 @@ import com.example.fidenz.usermanagement.adapters.UserAdapter;
 import com.example.fidenz.usermanagement.database.DaoMaster;
 import com.example.fidenz.usermanagement.database.DaoSession;
 import com.example.fidenz.usermanagement.database.DbSession;
+import com.example.fidenz.usermanagement.database.User;
 import com.example.fidenz.usermanagement.database.UserDao;
 
 import org.greenrobot.greendao.database.Database;
@@ -34,14 +35,15 @@ public class UserList extends AppCompatActivity {
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "user-db");
         Database db = helper.getWritableDb();
         DaoSession daoSession = new DaoMaster(db).newSession();
-        UserDao userDao = daoSession.getUserDao();
+        final UserDao userDao = daoSession.getUserDao();
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        RecyclerView review = findViewById(R.id.recycler_userlist);
+        final RecyclerView review = findViewById(R.id.recycler_userlist);
         review.setLayoutManager(layoutManager);
-        UserAdapter userAdapter = new UserAdapter(this, userDao.loadAll(), getSupportFragmentManager());
+        final UserAdapter userAdapter = new UserAdapter(this, userDao.loadAll(), getSupportFragmentManager());
         userAdapter.notifyDataSetChanged();
         review.setAdapter(userAdapter);
+        review.invalidate();
         userAdapter.notifyDataSetChanged();
 
         ImageButton btn_logout = findViewById(R.id.btn_logout);
@@ -70,6 +72,21 @@ public class UserList extends AppCompatActivity {
                                 finish();
                             }
                         }).create().show();
+            }
+        });
+
+
+        findViewById(R.id.txt_temp).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                User u = new User();
+                u.setUsername("test");
+                u.setMobile(000001);
+                u.setPassword("1234");
+
+                userDao.insert(u);
+                review.removeAllViews();
+                userAdapter.notifyDataSetChanged();
             }
         });
 
